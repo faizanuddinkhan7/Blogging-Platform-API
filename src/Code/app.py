@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+
 from Code.schema import Blog
 
 app = FastAPI()
@@ -49,7 +50,7 @@ def update_blog(id:int, uBlog: Blog):
     updated_blog = {
         "id": id,
         "title": uBlog.title,
-        "content": uBlog,
+        "content": uBlog.content,
         "category": uBlog.category,
         "tags": uBlog.tags,
     }
